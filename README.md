@@ -11,7 +11,7 @@
 
 
 ## SCREENSHOTS
-- link 1
+1.https://github.com/emmanuel-mukira/Stoicism-project/issues/1#issue-1652592247
 - link 2
 
 
