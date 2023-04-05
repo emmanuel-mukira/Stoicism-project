@@ -1,8 +1,29 @@
-let quote = document.getElementById('text');
-let author = document.getElementById('author');
-let button = document.getElementById('quote');
+let quote2 = document.getElementById('text2');
+let author2 = document.getElementById('authorName2');
+let button2 = document.getElementById('quote2');
 
 const url = "http://localhost:3000/quotes";
+const authorName2 = "Marcus Aurelius"; // replace with your desired author name
+
+let getQuote2 = () => {
+  fetch(`${url}?author=${authorName2}`)
+    .then((data) => data.json())
+    .then((items) => {
+      const randomIndex = Math.floor(Math.random() * items.length);
+      const item = items[randomIndex];
+      quote2.innerText = item.text;
+      author2.innerText = item.author;
+    });
+};
+
+button2.addEventListener('click', getQuote2);
+window.addEventListener("load", getQuote2);
+
+let quote = document.getElementById('text');
+let author = document.getElementById('authorName');
+let button = document.getElementById('quote');
+
+
 const authorName = "Seneca"; // replace with your desired author name
 
 let getQuote = () => {
@@ -18,5 +39,3 @@ let getQuote = () => {
 
 button.addEventListener('click', getQuote);
 window.addEventListener("load", getQuote);
-
-
