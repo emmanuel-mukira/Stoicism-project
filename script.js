@@ -39,3 +39,59 @@ let getQuote = () => {
 
 button.addEventListener('click', getQuote);
 window.addEventListener("load", getQuote);
+
+let quote3 = document.getElementById('text3');
+let author3 = document.getElementById('authorName3');
+let button3 = document.getElementById('quote3');
+
+
+const authorName3 = "Epictetus"; // replace with your desired author name
+
+let getQuote3 = () => {
+  fetch(`${url}?author=${authorName3}`)
+    .then((data) => data.json())
+    .then((items) => {
+      const randomIndex = Math.floor(Math.random() * items.length);
+      const item = items[randomIndex];
+      quote3.innerText = item.text;
+      author3.innerText = item.author;
+    });
+};
+
+button3.addEventListener('click', getQuote3);
+window.addEventListener("load", getQuote3);
+
+function submitComment() {
+    var comment = document.getElementById("comment").value;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "db.json", true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        // Handle successful response
+        displayComments();
+      }
+    };
+    var data = JSON.stringify({ comment: comment });
+    xhr.send(data);
+  }
+
+  function displayComments() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "db.json", true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        var comments = JSON.parse(xhr.responseText);
+        var commentList = document.getElementById("commentList");
+        commentList.innerHTML = "";
+        for (var i = 0; i < comments.length; i++) {
+          var li = document.createElement("li");
+          li.appendChild(document.createTextNode(comments[i].comment));
+          commentList.appendChild(li);
+        }
+      }
+    };
+    xhr.send();
+  }
+  
