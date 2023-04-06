@@ -61,8 +61,23 @@ let getQuote3 = () => {
 button3.addEventListener('click', getQuote3);
 window.addEventListener("load", getQuote3);
 
-
-
- 
+function submitComment() {
+    // Get the values of the name and comment fields
+    var name = document.getElementById("name").value;
+    var comment = document.getElementById("comment").value;
+    
+    // Create a new list item with the name and comment
+    var listItem = document.createElement("li");
+    var text = document.createTextNode(name + ": " + comment);
+    listItem.appendChild(text);
+    
+    // Add the new list item to the comment list
+    var commentList = document.getElementById("commentList");
+    commentList.appendChild(listItem);
+    
+    // Clear the name and comment fields
+    document.getElementById("name").value = "";
+    document.getElementById("comment").value = "";
+  }
 
   

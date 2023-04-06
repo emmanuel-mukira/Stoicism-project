@@ -36,11 +36,10 @@
                     who has himself in his power."</h3>
                 <h4>Seneca.</h4>
             </div>
-            <img id="firstImage" src="pexels-josiah-lewis-772689.jpg">
         </section>
-     <section >
+     <section id="sec-1" >
      <br><div id="one" class="default first item">
-        <h2><br>What its all about</h2>
+        <h2 href="#one"><br>What its all about</h2>
         <p> <br>Stoicism is a mindset based on a set of <br>observations about how the mind (and world) works.Stoics argue that: 
             Your thoughts and beliefs create the world you inhabit,
              not external circumstances, so you ought to take responsibility for your mind.
@@ -52,7 +51,7 @@
             <h5>EPICTETUS</h5>
     </div>
     </section>
-    <section>
+    <section id="sec-2">
         <h2 href="#two"><br>Marcus Aurelius</h2>
         <p>
             <img src="marcus-aurelius.jpg">
@@ -70,7 +69,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="sec-3">
         <h2 href="#three"><br>Seneca</h2>
         <p>
             <img src="">
@@ -88,7 +87,7 @@
           </div>
       </div>
     </section>
-    <section>
+    <section id="sec-4">
         <h2 href="#four"><br>Epictetus</h2>
         <p>
         <img src="pexels-heloisa-vecchio-9787431.jpg">
@@ -104,18 +103,19 @@
               <button id="like">Like Button</button>
           </div>
     </section>
-    <section>
+    <section id="sec-5">
         <h2 href="#five">Reflect</h2>
         <p> <img src="np_Woman in yoga pose next to castle wall overlooking sea_5wjGv0_free.jpg">
         </p>
-        <form>
-            <label for="comment">Share your reflections:</label>
-            <textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-            <button type="submit" onclick="submitComment()">Submit</button>
-          </form>
-
-          <ul id="commentList"></ul>
-
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name"><br><br>
+      <label for="comment">Share your Reflections:</label><br>
+      <textarea id="comment" name="comment"></textarea><br><br>
+      <input type="button" id="submitBtn" value="Submit" onclick="submitComment()">
+    </form>
+       
+    <ul id="commentList"></ul>
 
     </section>
     <script src="script.js"></script>
