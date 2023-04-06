@@ -61,20 +61,7 @@ let getQuote3 = () => {
 button3.addEventListener('click', getQuote3);
 window.addEventListener("load", getQuote3);
 
-function submitComment() {
-    var comment = document.getElementById("comment").value;
-    var xhr = new XMLHttpRequest();
-    xhr.open("POST", "db.json", true);
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        // Handle successful response
-        displayComments();
-      }
-    };
-    var data = JSON.stringify({ comment: comment });
-    xhr.send(data);
-  }
+
 
  
 
