@@ -76,22 +76,6 @@ function submitComment() {
     xhr.send(data);
   }
 
-  function displayComments() {
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "db.json", true);
-    xhr.setRequestHeader("Content-type", "application/json");
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        var comments = JSON.parse(xhr.responseText);
-        var commentList = document.getElementById("commentList");
-        commentList.innerHTML = "";
-        for (var i = 0; i < comments.length; i++) {
-          var li = document.createElement("li");
-          li.appendChild(document.createTextNode(comments[i].comment));
-          commentList.appendChild(li);
-        }
-      }
-    };
-    xhr.send();
-  }
+ 
+
   
