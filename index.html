@@ -13,19 +13,21 @@
 </head>
   <body>
     <section>
-        <header>
-    <nav>
-        <div class="container">
-              <ul id="navigation">
-                <li><a id="sec-1" href="#one">What its all about</a></li>
-                <li><a id="sec-2" href="#two">Marcus Aurelius</a></li>
-                <li><a id="sec-3" href="#three">Seneca</a></li>
-                <li><a id="sec-4" href="#four">Epictetus</a></li>
-                <li><a id="sec-5" href="#five">Reflect</a></li>
-              </ul>
-        </div>
-     </nav>
+        <header id="top">
+            <nav>
+                <div class="container">
+                    <ul id="navigation">
+                        <li><a id="sec-1" href="#one">What its all about</a></li>
+                        <li><a id="sec-2" href="#two">Marcus Aurelius</a></li>
+                        <li><a id="sec-3" href="#three">Seneca</a></li>
+                        <li><a id="sec-4" href="#four">Epictetus</a></li>
+                        <li><a id="sec-5" href="#five">Reflect</a></li>
+                        <li><a href="#top">Back to Top</a></li>
+                    </ul>
+                </div>
+            </nav>
         </header>
+        
      </section>
      <section> 
             <h1 id="h1">STOICISM: WISDOM FOR EVERYDAY LIFE </h1>
@@ -51,8 +53,8 @@
             <h5>EPICTETUS</h5>
     </div>
     </section>
-    <section id="sec-2">
-        <h2 href="#two"><br>Marcus Aurelius</h2>
+    <section  href="#two">
+        <h2 id="two"><br>Marcus Aurelius</h2>
         <p>
             <img src="marcus-aurelius.jpg">
             <br>
@@ -65,14 +67,12 @@
                 <p default="" id="text2"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i></p>
                 <h4 id="authorName2"></h4>
                 <button id="quote2">Generate quote</button>
-                <button id="like">Like Button</button>
             </div>
         </div>
     </section>
     <section id="sec-3">
-        <h2 href="#three"><br>Seneca</h2>
+        <h2 id="three"><br>Seneca</h2>
         <p>
-            <img src="">
             <br>
             Seneca agrees with the Stoics that virtue is sufficient for happiness. One's virtue, unlike one's circumstances, is within one's power.<br>
              Knowledge of one's nature is importantly connected, in Stoicism, with one's knowledge of nature generally. Seneca often appeals to the importance of understanding nature in his works.
@@ -83,12 +83,11 @@
               <p default="" id="text"><i class="fas fa-quote-left"></i><i class="fas fa-quote-right"></i></p>
               <h4 id="authorName"></h4>
               <button id="quote">Generate quote</button>
-              <button id="like">Like Button</button>
           </div>
       </div>
     </section>
-    <section id="sec-4">
-        <h2 href="#four"><br>Epictetus</h2>
+    <section >
+        <h2 id="four"><br>Epictetus</h2>
         <p>
         <img src="pexels-heloisa-vecchio-9787431.jpg">
             <br>
@@ -100,11 +99,10 @@
               <p default="" id="text3"></p>
               <h4 id="authorName3"></h4>
               <button id="quote3">Generate quote</button>
-              <button id="like">Like Button</button>
           </div>
     </section>
     <section id="sec-5">
-        <h2 href="#five">Reflect</h2>
+        <h2 id="five">Reflect</h2>
         <p> <img src="np_Woman in yoga pose next to castle wall overlooking sea_5wjGv0_free.jpg">
         </p>
     <form>
@@ -112,7 +110,8 @@
       <input type="text" id="name" name="name"><br><br>
       <label for="comment">Share your Reflections:</label><br>
       <textarea id="comment" name="comment"></textarea><br><br>
-      <input type="button" id="submitBtn" value="Submit" onclick="submitComment()">
+      <input type="button" id="submitBtn
+      " value="Submit" onclick="submitComment()">
     </form>
        
     <ul id="commentList"></ul>

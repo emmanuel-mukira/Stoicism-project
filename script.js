@@ -24,7 +24,7 @@ let author = document.getElementById('authorName');
 let button = document.getElementById('quote');
 
 
-const authorName = "Seneca"; // replace with your desired author name
+const authorName = "Seneca"; 
 
 let getQuote = () => {
   fetch(`${url}?author=${authorName}`)
@@ -45,7 +45,7 @@ let author3 = document.getElementById('authorName3');
 let button3 = document.getElementById('quote3');
 
 
-const authorName3 = "Epictetus"; // replace with your desired author name
+const authorName3 = "Epictetus"; 
 
 let getQuote3 = () => {
   fetch(`${url}?author=${authorName3}`)
@@ -80,4 +80,10 @@ function submitComment() {
     document.getElementById("comment").value = "";
   }
 
+  const playBtn = document.getElementById('textToVoice1');
+
+
+  
+  
+  
   

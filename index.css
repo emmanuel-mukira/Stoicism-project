@@ -218,7 +218,8 @@ other-elements {
 }
 /* Styling for hero section */
 .hero {
-  background-color: #000 transparent;
+  background-image: url('pexels-josiah-lewis-772689.jpg');
+  background-color: #000 ;
   position: relative;
 }
 
@@ -251,6 +252,7 @@ other-elements {
 }
 
 .hero {
+  background-image: "pexels-josia-lewis-772689.jpg";
   background-color: #292929 transparent;
   color: white;
   height: 90vh;
