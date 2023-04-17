@@ -1,21 +1,28 @@
 let quote2 = document.getElementById('text2');
+//gets where the quote will be put
 let author2 = document.getElementById('authorName2');
+//gets where the author will be put
 let button2 = document.getElementById('quote2');
+//gets the generate quote button
 
 const url = "http://localhost:3000/quotes";
-const authorName2 = "Marcus Aurelius"; // replace with your desired author name
-
+//defines the url from which quotes will be fetched
+const authorName2 = "Marcus Aurelius";
+ //sets up the particular author name for which quotes will be gotten
+  
 let getQuote2 = () => {
   fetch(`${url}?author=${authorName2}`)
+  //fetch request with a query parameter in the URL
     .then((data) => data.json())
     .then((items) => {
       const randomIndex = Math.floor(Math.random() * items.length);
+      //gets a random index between 0 and the length of the db.json -1 then rounds 
       const item = items[randomIndex];
       quote2.innerText = item.text;
       author2.innerText = item.author;
     });
 };
-
+//event  listeners code
 button2.addEventListener('click', getQuote2);
 window.addEventListener("load", getQuote2);
 
@@ -80,7 +87,7 @@ function submitComment() {
     document.getElementById("comment").value = "";
   }
 
-  const playBtn = document.getElementById('textToVoice1');
+  
 
 
   
