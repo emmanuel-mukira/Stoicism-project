@@ -1,3 +1,5 @@
+//to run json server run json-server --watch db.json
+
 let quote2 = document.getElementById('text2');
 //gets where the quote will be put
 let author2 = document.getElementById('authorName2');
